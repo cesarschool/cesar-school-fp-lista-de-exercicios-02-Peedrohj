@@ -18,9 +18,62 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 8")
-
-
+    ano = int(input('Me informe o ano: '))
+    bisexto = ano % 4
+    bisexto2 = ano % 400
+    if bisexto == 0:
+        if ano % 100 != 0:
+            bi = True
+        else:
+            bi = False
+    elif bisexto2 == 0:
+        if ano % 100 != 0:
+            bi = True
+        else:
+            bi = False
+    else:
+        bi = False
     
+    if bi == True:
+        mes = int(input('Me informe o mes em numero: '))
+        dia = int(input('Me informe o dia: '))
+        if mes == 2:
+            if dia <= 28:
+                dia += 1
+            elif dia == 29:
+                dia = 1
+                mes = mes + 1
+        elif mes != 2:
+            if dia <= 29:
+                dia += 1
+            elif dia == 30:
+                dia = 1
+                mes = mes + 1
+            elif dia == 31 and mes == 12:
+                dia = 1
+                mes = 1
+                ano += 1
+    elif bi == False:
+        mes = int(input('Me informe o mes em numero: '))
+        dia = int(input('Me informe o dia: '))
+        if mes == 2:
+            if dia <= 27:
+                dia += 1
+            elif dia == 28:
+                dia = 1
+                mes = mes +1
+        elif mes != 2:
+            if dia <= 29:
+                dia += 1
+            elif dia == 30:
+                dia = 1
+                mes = mes + 1
+            elif dia == 31 and mes == 12:
+                dia = 1
+                mes = 1
+                ano += 1
+    
+    print('O sucessor eh {}-{}-{}'.format(dia, mes, ano))
+
 if __name__ == '__main__':
     main()
