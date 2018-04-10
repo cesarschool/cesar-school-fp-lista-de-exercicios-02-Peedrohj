@@ -19,9 +19,21 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 7")
+    ano = int(input('Me informe o ano: '))
+    bisexto = ano % 4
+    bisexto2 = ano % 400
+    if bisexto == 0:
+        if ano % 100 != 0:
+            print('O ano eh bisexto')
+        else:
+            print('O ano nao eh bisexto')
+    elif bisexto2 == 0:
+        if ano % 100 != 0:
+            print('O ano eh bisexto')
+        else:
+            print('O ano nao eh bisexto')
+    else:
+        print('O ano nao eh bisexto')
 
-
-    
 if __name__ == '__main__':
     main()
