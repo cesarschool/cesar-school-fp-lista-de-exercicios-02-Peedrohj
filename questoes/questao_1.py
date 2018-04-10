@@ -9,9 +9,13 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 1")
+    n1 = int(input('Me informe um numero: '))
+    n2 = int(input('Me informe outro numero: '))
+    n3 = int(input('Me informe outro numero: '))
+    n4 = int(input('Me informe outro numero: '))
+    n5 = int(input('Me informe outro numero: '))
     
-
+    print('O maior numero e : {}'.format(max(n1, n2, n3, n4, n5)))  
 
 if __name__ == '__main__':
     main()
