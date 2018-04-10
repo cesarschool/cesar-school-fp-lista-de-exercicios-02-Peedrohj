@@ -11,16 +11,20 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    lado1 = float(input('Me informe o primeiro lado: '))
-    lado2 = float(input('Me informe o segundo lado: '))
-    lado3 = float(input('Me informe o terceiro lado: '))
-    
-    if lado1 == lado2 == lado3:
-        print('O triangulo eh equilatero')
-    elif lado1 == lado2 != lado3 or lado2 == lado3 != lado1 or lado3 == lado1 != lado2:
-        print('O tirangulo eh isosceles')
+    print('Me informe o tamanho de três retas ')
+    a = float(input('Me informe o tamanho do primeiro lado: '))
+    b = float(input('Me informe o tamanho do segundo lado: '))
+    c = float(input('Me informe o tamanho do terceiro lado: '))
+    if abs(a - b) < c < a + b or abs(a - c) < b < a + c or abs(b - c) < a < b + c:
+        tri = True
+        if a == b == c:
+            print('O triangulo eh equilatero')
+        elif a == b != c or a == c != b or c == b != a:
+            print('O tirangulo eh isosceles')
+        else:
+            print('O triangulo eh escaleno')
     else:
-        print('O triangulo eh escaleno')
+        print('Não pode formar um triângulo')
     
 if __name__ == '__main__':
     main()
