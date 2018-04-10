@@ -14,9 +14,14 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 4")
+    valor = float(input('Me informe o valor da casa: '))
+    salario = float(input('Me informe o seu salario: '))
+    meses = int(input('Me informe a qunatidade de meses a pagar:'))
+    mensalidade = ((valor * 30) /100) / meses
+    if salario < mensalidade:
+        print('o emprestimo foi negado')
+    else:
+        print('O emprestimo foi concebido')
 
-
-    
 if __name__ == '__main__':
     main()
